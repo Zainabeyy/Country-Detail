@@ -1,26 +1,54 @@
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-sans: "Nunito Sans", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  /* colors */
+  --color-dark-Elements: hsl(209, 23%, 22%);
+  --color-dark-background: hsl(207, 26%, 17%);
+  --color-light-Text: hsl(200, 15%, 8%);
+  --color-light-Input: hsl(0, 0%, 52%);
+  --color-light-background: hsl(0, 0%, 98%);
+
+  /* screen breakpoint */
+
+  --breakpoint-xs: 32rem;
+
+  /* animation */
+
+  --animate-loading: loading 1.5s infinite ease-in-out;
+
+  @keyframes loading {
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+      transform: translateX(60px);
+    }
+  }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+  .elements {
+    @apply bg-white dark:bg-dark-Elements;
+  }
+}
+
+@layer components {
+  .box-cont {
+    @apply py-2.5 px-8 w-fit rounded-md bg-white dark:bg-dark-Elements shadow-md flex items-center;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply antialiased bg-light-background dark:bg-dark-background text-light-Text dark:text-white font-semibold;
 }
