@@ -16,10 +16,10 @@ export async function generateMetadata({
   const country = await fetchCountryByName(slug);
 
   return {
-    title: `${country.name.common} || Country Details`,
+    title: `${country.name.common} | Country Details`,
     description: `Explore detailed information about ${country.name.common}, including population, region, languages, currencies, and neighboring countries.`,
     openGraph: {
-      title: `${country.name.common} || Country Details`,
+      title: `${country.name.common} | Country Details`,
       description: `Learn about ${country.name.common}’s population, region, languages, and more.`,
       images: [
         {
