@@ -137,8 +137,8 @@ export default async function CountryDetailPage({
                 </h2>
                 <ul className="flex flex-wrap gap-2.5">
                   {borderCountries.map((name, index) => (
-                    <li key={index} className="box-cont">
-                      <Link href={`/${name.toLowerCase()}`}>{name}</Link>
+                    <li key={index}>
+                      <Link href={`/${name.toLowerCase()}`}  className="box-cont">{name}</Link>
                     </li>
                   ))}
                 </ul>
