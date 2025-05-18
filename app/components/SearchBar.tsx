@@ -10,7 +10,7 @@ export default function SearchBar({query,setQuery}:SearchBarProps) {
   return (
     <div className="text-light-Input elements mx-7 xs:mx-20 py-3.5 px-8 searchPadding mt-8 lg:mt-0 lg:mx-0 shadow-md rounded-lg max-w-xl lg:w-xl">
       <Form action="/" scroll={false} className="flex items-center">
-        <button type="submit">
+        <button type="submit" aria-label="Search">
           <IonIcon name="search-outline" className="pr-6 align-middle dark:text-white" />
         </button>
         <input

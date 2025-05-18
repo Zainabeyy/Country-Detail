@@ -10,7 +10,7 @@
   --color-dark-Elements: hsl(209, 23%, 22%);
   --color-dark-background: hsl(207, 26%, 17%);
   --color-light-Text: hsl(200, 15%, 8%);
-  --color-light-Input: hsl(0, 0%, 52%);
+  --color-light-Input: #4C4B4B;
   --color-light-background: hsl(0, 0%, 98%);
 
   /* screen breakpoint */
